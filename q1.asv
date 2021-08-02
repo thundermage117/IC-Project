@@ -1,4 +1,4 @@
-text= fileread('Line.txt');
+text= fileread('Word.txt');
 split=double(text);
 count = histcounts( split, [1:128] );
 %bar(count/length(split));
@@ -40,19 +40,13 @@ fclose(fileID);
 
 %% PART 5
 fileID = fopen('compressed.bin');
-fnew=fopen('decoded.txt','w+');
 A = fread(fileID,Inf,'ubit1');
-k=0;
 while ~isempty(A)
-    k=k+1;
-    for L=1:length(unique_count)
-        if length(A(1:k))==length(code{1,L})
-            if A(1:k)==code{1,L}'
-            fprintf(fnew,'%c',char(code{2,L}));
-            A(1:k)=[];
-            k=1;
-            break;
-            end
-        end
-    end
+    k=1;
+    for L=1:length(cell)
+        if A(1:k)==code{1,L}'
+            char(code{1,L}')
+            
+        
+end
 end
