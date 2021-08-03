@@ -21,7 +21,7 @@ for i = 1:2
     if isempty(tree) 
         break; 
     end
-    temp.probability = temp.probability + tree(1).probability; % for ascending order
+    temp.probability = temp.probability + tree(1).probability;
     temp.child{i} = tree(1);
     tree(1) = [];
 end

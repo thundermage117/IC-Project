@@ -1,4 +1,4 @@
-text= fileread('Line.txt');
+text= fileread('Word.txt');
 split=double(text);
 count = histcounts( split, [1:128] );
 %bar(count/length(split));
