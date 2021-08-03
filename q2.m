@@ -9,8 +9,8 @@ E=0;
 for L=1:N
     c=C(randi(size(C,1)),:);
     y=binarysym(c,p);
-    [~,err]=mdd(C,y);
-    if err>0
+    c_cap=mdd(C,y);
+    if sum(xor(c,c_cap))>0
         E=E+1;
     end
 end
