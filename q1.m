@@ -73,3 +73,19 @@ while ~isempty(A)
         end
     end
 end
+
+%% Some Comments
+% How much compression is our code doing?
+% Word.txt:     5.36KB---->2.02KB
+% Line.txt:     5.37KB---->2.98KB
+%Paragraph.txt: 5.27KB---->2.96KB
+% It is able to compress upto 60% and as the number of unique symbols
+% increases, size increases.
+
+% Text is from 'The Hound of the Baskervilles' by Sir Arthur Conan and is
+% currently in the public domain.
+
+% We know ASCII usually lies in the range 0-128(or 256), the text had left
+% and right quotes which had ASCII values around 2100's as we were checking 
+% till 128, which didn't sum the probability to 1 and threw an error. 
+% These characters were replaced by standard quatation marks.
