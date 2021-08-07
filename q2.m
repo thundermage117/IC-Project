@@ -126,3 +126,19 @@ P_e=E/N
 % d. 0.0060
 % e. 0.2570
 % f. 0.9950
+
+min_P_E= [0.0495 0.4590 0.9955 0.0060 0.2570 0.9950];
+
+subplot(2,1,1);
+x=[0.015 0.1 0.45];
+plot(x,min_P_E(1:3));
+title('n=15, k=10');
+xlabel('p');
+ylabel('P_E(n,k,p)');
+
+subplot(2,1,2);
+
+plot(x,min_P_E(4:6));
+title('n=20, k=10');
+xlabel('p');
+ylabel('P_E(n,k,p)');
